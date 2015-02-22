@@ -3,6 +3,12 @@
 #     subscribe command topic and take a picture by a command
 #     send (publish) the picture data via mqtt
 #
+#       for Raspberry Pi / Raspbian and USB webcam
+#       needs: paho-mqtt clients for python
+#              mosquitto-clients 
+#              fswebcam or raspistill
+#              port forwarding for MQTT protocol is expected
+#
 #     ver1.0  2015.02.22 Masakazu Miyamoto mqtt.and@gmail.com
 
 import paho.mqtt.client as mqtt
@@ -11,7 +17,7 @@ import os
 #
 #  Parameters
 #
-topic_root="ET/TEST/DEVICE"
+topic_root="my/device/topic"
 topic_command="/command"
 topic_pub="/PICTURE"
 
